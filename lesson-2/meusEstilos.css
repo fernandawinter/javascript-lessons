@@ -1,0 +1,14 @@
+.meuParagrafo {
+    color: blueviolet;
+    font-style: italic;
+}
+
+.meuTítulo {
+    color: brown;
+    font-style:normal;
+}
+
+.tamanhoFontePadrao {
+    font-size: 22px;
+}
+
