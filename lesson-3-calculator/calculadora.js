@@ -1,73 +1,63 @@
-<html>
-    <head>
-      <meta charset="UTF-8"></meta>
-      <title>Calculadora</title>
-    </head>
-    <body>
-        <p>Minha Calculadora</p>
-        <input id="primeiroValor" type="number"/>
-        <input id="segundoValor" type="number"/>
-        <input type="button" value="Somar" onclick="clicaSomar()"/>
-        <input type="button" value="Subtrair" onclick="clicaSubtrair()"/>
-        <input type="button" value="Dividir" onclick="clicaDividir()"/>
-        <input type="button" value="Multiplicar" onclick="clicaMultiplicar()"/>
-        <p id="resultadoCalculo"></p>
-
-    </body>
-</html>
-
 function clicaSomar() {
-    var x = parseInt(document.getElementById("primeiroValor").value);
-    var y = parseInt(document.getElementById("segundoValor").value);
+    var x = getPrimeiroValor();
+    var y = getSegundoValor();
     var somatorio = soma(x, y);
-    document.getElementById("resultadoCalculo").innerHTML = "Meu Resultado: " + somatorio;
+    setResultado(somatorio);
 
+    // setResultado(soma(getPrimeiroValor(), getSegundoValor()));
 }
 
 function clicaSubtrair() {
-    var x = parseInt(document.getElementById("primeiroValor").value);
-    var y = parseInt(document.getElementById("segundoValor").value);
+    var x = getPrimeiroValor();
+    var y = getSegundoValor();
     var resultado = subtracao(x, y);
-    document.getElementById("resultadoCalculo").innerHTML = "Meu Resultado: " + resultado;
-
+    setResultado(resultado);
 }
 
 function clicaDividir() {
-    var x = parseInt(document.getElementById("primeiroValor").value);
-    var y = parseInt(document.getElementById("segundoValor").value);
+    var x = getPrimeiroValor();
+    var y = getSegundoValor();
     var resultado = divisao(x, y);
-    document.getElementById("resultadoCalculo").innerHTML = "Meu Resultado: " + resultado;
-
+    setResultado(resultado);
 }
 
 function clicaMultiplicar() {
-    var x = parseInt(document.getElementById("primeiroValor").value);
-    var y = parseInt(document.getElementById("segundoValor").value);
+    var x = getPrimeiroValor();
+    var y = getSegundoValor();
     var resultado = multiplicacao(x, y);
-    document.getElementById("resultadoCalculo").innerHTML = "Meu Resultado: " + resultado;
+    setResultado(resultado);}
 
+function getPrimeiroValor() {
+    var resultado = parseInt(document.getElementById("primeiroValor").value);
+    return resultado;
+
+    // return parseInt(document.getElementById("primeiroValor").value);
 }
 
+function getSegundoValor() {
+    var resultado = parseInt(document.getElementById("segundoValor").value);
+    return resultado;
+}
+
+function setResultado(resultado) {
+    document.getElementById("resultadoCalculo").innerHTML = "Meu Resultado: " + resultado;
+}
 function soma(valorA, valorB) {
     var resultado = valorA + valorB;
     return resultado; 
-
 }
 
 function subtracao(valorA, valorB) {
     var resultado = valorA - valorB;
-    return resultado;
-    
+    return resultado; 
 }
 
 function divisao(valorA, valorB) {
     var resultado = valorA / valorB;
     return resultado;
-
 }
 
 function multiplicacao(valorA, valorB) {
     var resultado = valorA * valorB;
     return resultado;
-
 }
