@@ -53,7 +53,13 @@ function subtracao(valorA, valorB) {
 }
 
 function divisao(valorA, valorB) {
-    var resultado = valorA / valorB;
+    var resultado;
+    
+    if (valorB == 0) {
+         resultado = 'Não é possível dividir por zero';
+    } else {
+         resultado = valorA / valorB;  
+    }
     return resultado;
 }
 
