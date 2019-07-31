@@ -26,4 +26,14 @@ describe('Testing calculadora.js:', ()=> { // describe é o contexto do que quer
         expect(resultado).toBe('Não é possível dividir por zero'); // aqui eu to validando se a soma deu certo mesmo 
       });
 
+      it('multiply 6*8 results in 48', ()=> { // it é um teste unitário
+        var resultado = multiplicacao(6,8); // aqui eu tô chamando uma função do arquivo que quero testar
+        expect(resultado).toBe(48); // aqui eu to validando se a soma deu certo mesmo 
+      });
+
+      it('subtract 7-5 results in 2', ()=> { // it é um teste unitário
+        var resultado = subtracao(7,5); // aqui eu tô chamando uma função do arquivo que quero testar
+        expect(resultado).toBe(2); // aqui eu to validando se a soma deu certo mesmo 
+      });
+
   })
