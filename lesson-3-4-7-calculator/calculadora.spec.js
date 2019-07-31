@@ -36,4 +36,14 @@ describe('Testing calculadora.js:', ()=> { // describe é o contexto do que quer
         expect(resultado).toBe(2); // aqui eu to validando se a soma deu certo mesmo 
       });
 
+      it('multiply 4*5 results in 20', ()=> { // it é um teste unitário
+        var resultado = multiplicacao(4,5); // aqui eu tô chamando uma função do arquivo que quero testar
+        expect(resultado).toBe(20); // aqui eu to validando se a soma deu certo mesmo 
+      });
+
+      it('subtract 7-4 results in 3', ()=> { // it é um teste unitário
+        var resultado = subtracao(7,4); // aqui eu tô chamando uma função do arquivo que quero testar
+        expect(resultado).toBe(3); // aqui eu to validando se a soma deu certo mesmo 
+      });
+
   })
