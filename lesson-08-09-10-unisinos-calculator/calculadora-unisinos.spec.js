@@ -53,14 +53,44 @@ describe('Testing calculadora-unisinos.js:', ()=> { // describe é o contexto do
         expect(resultado).toBe('nota do grau B não pode ser menor do que 0'); // aqui eu to validando se a soma deu certo mesmo 
     });
 
-    
-
-
-
-
     it('quando eu tirar 6 no grau A preciso tirar 6 no grau B', ()=> { // it é um teste unitário
         var resultado = quantoPrecisoGrauB(6); // aqui eu tô chamando uma função do arquivo que quero testar
         expect(resultado).toBe(6); // aqui eu to validando se a soma deu certo mesmo 
+    });
+
+    it('quando eu tirar 11 no grau A precisa ser retornado um erro', ()=> { // it é um teste unitário
+        var resultado = quantoPrecisoGrauB(11); // aqui eu tô chamando uma função do arquivo que quero testar
+        expect(resultado).toBe('não é possível existir uma nota maior do que 10'); // aqui eu to validando se a soma deu certo mesmo 
+    });
+
+    it('quando eu tirar -2 no grau A precisa ser retornado um erro', ()=> { // it é um teste unitário
+        var resultado = quantoPrecisoGrauB(-2); // aqui eu tô chamando uma função do arquivo que quero testar
+        expect(resultado).toBe('não é possível existir uma nota menor do que 0'); // aqui eu to validando se a soma deu certo mesmo 
+    });
+
+    it('quando eu tirar 7 no grau A preciso tirar 5,57 no grau B ', ()=> { // it é um teste unitário
+        var resultado = quantoPrecisoGrauB(7); // aqui eu tô chamando uma função do arquivo que quero testar
+        expect(resultado).toBe(5.57); // aqui eu to validando se a soma deu certo mesmo 
+    });
+
+    it('quando eu tirar 4 no grau A preciso tirar 6,86 no grau B ', ()=> { // it é um teste unitário
+        var resultado = quantoPrecisoGrauB(4); // aqui eu tô chamando uma função do arquivo que quero testar
+        expect(resultado).toBe(6.86); // aqui eu to validando se a soma deu certo mesmo 
+    });
+
+    it('quando eu tirar 0 no grau A preciso tirar 8,57 no grau B ', ()=> { // it é um teste unitário
+        var resultado = quantoPrecisoGrauB(0); // aqui eu tô chamando uma função do arquivo que quero testar
+        expect(resultado).toBe(8.57); // aqui eu to validando se a soma deu certo mesmo 
+    });
+
+    it('quando eu tirar 2,3 no grau A preciso tirar 7,59 no grau B ', ()=> { // it é um teste unitário
+        var resultado = quantoPrecisoGrauB(2.3); // aqui eu tô chamando uma função do arquivo que quero testar
+        expect(resultado).toBe(7.59); // aqui eu to validando se a soma deu certo mesmo 
+    });
+
+    it('quando eu tirar 10 no grau A preciso tirar 4,29 no grau B ', ()=> { // it é um teste unitário
+        var resultado = quantoPrecisoGrauB(10); // aqui eu tô chamando uma função do arquivo que quero testar
+        expect(resultado).toBe(4.29); // aqui eu to validando se a soma deu certo mesmo 
     });
 
 });

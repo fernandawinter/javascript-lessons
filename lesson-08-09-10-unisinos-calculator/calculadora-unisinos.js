@@ -39,5 +39,17 @@ function passouOuNao(grauA, grauB) {
 }
  
 function quantoPrecisoGrauB(grauA) {
-    
+
+    if (grauA > 10) {
+        return 'não é possível existir uma nota maior do que 10';
+    }
+
+    if (grauA < 0) {
+        return 'não é possível existir uma nota menor do que 0';
+    }
+
+    var totalGrauA = grauA * PESO_GRAU_A;
+    var totalGrauB = 6 - totalGrauA;
+    var grauB =  Math.round((totalGrauB / PESO_GRAU_B) * 100) / 100;
+    return grauB;
 }
