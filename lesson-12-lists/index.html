@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>laço de repetição</title>
+</head>
+
+<body>
+    <div>
+        <p>Adição de lista de nomes com laço de repetição for</p>
+        <ul id="minhaLista">
+            <li>Fernanda Winter - 23</li>
+            <li>Lucas Tagliani - 24</li>
+            <li>Eliane Winter - 54</li>
+        </ul>
+        <button onclick="addPeople()">Adicionar pessoas</button>
+    </div>
+    <hr>
+    <div>
+        <p>Adição de lista de cidades complexas com laço de repetição for</p>
+        <ul id="minhasCidades">
+            <li>Porto Alegre - Brasil - Português</li>
+            <li>Berlim - Alemanha - Alemão</li>
+        </ul>
+        <button onclick="addCities()">Adicionar cidades</button>
+    </div>
+</body>
+
+</html>
+<script>
+
+    function addItemToList(elementIdFromList, listItem) {
+        var lista = document.getElementById(elementIdFromList);
+        var item = document.createElement('li');
+        item.appendChild(document.createTextNode(listItem));
+        lista.append(item);
+    }
+
+    function addPeople() {
+        var listaDePessoas = ['Ivete Sangalo - 47', 'Cláudia Leitte - 39', 'Ana Maria Braga - 70']
+        for (let i = 0; i < listaDePessoas.length; i++) {
+            const pessoa = listaDePessoas[i];
+            addItemToList('minhaLista', pessoa);
+        }
+    }
+
+    function addCities() {
+        var listaDeCidades = [
+            {
+                nome: 'Jerusalém', 
+                pais: 'Israel',
+                idioma: 'Hebraico'
+            },
+            {
+                nome: 'Maceió',
+                pais:  'Brasil',
+                idioma: 'Português'
+            },
+            {
+                nome: 'Boston',
+                pais:  'EUA',
+                idioma: 'Inglês'
+            }
+        ];
+
+        for (let i = 0; i < listaDeCidades.length; i++) {
+            const cidade = listaDeCidades[i];
+            var cidadeConcatenada = cidade.nome + ' - ' + cidade.pais + ' - ' + cidade.idioma;
+            addItemToList('minhasCidades', cidadeConcatenada);
+        }
+    }
+    
+</script>
