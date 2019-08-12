@@ -1,13 +1,22 @@
 function fibonacciUntil(numeroLimite) {
-    var resultado = [1, 1];
-    var contador = 0;
+    var listaDeElementosFibonacci = [1, 1];
+    var i = 0;
+
+    // var novoElemento = 1;
+    // while (novoElemento <= numeroLimite) {
+    //     listaDeElementosFibonacci.push(novoElemento);
+    //     novoElemento = listaDeElementosFibonacci[i] + listaDeElementosFibonacci[i + 1];
+    //     i++;
+    // }
+    
     do {
-        var soma = resultado[contador] + resultado[contador + 1];
-        resultado.push(soma);
-        contador++;
-        console.log('contando... ' + contador);
-    } while (soma < numeroLimite);
+        var novoElemento = listaDeElementosFibonacci[i] + listaDeElementosFibonacci[i + 1];
+        if (novoElemento > numeroLimite) {
+            break;
+        }
+        listaDeElementosFibonacci.push(novoElemento); 
+        i = i + 1;
+    } while (true);
 
-
-    return resultado;
+    return listaDeElementosFibonacci;
 }

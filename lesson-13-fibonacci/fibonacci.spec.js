@@ -4,7 +4,7 @@ describe('Testing fibonacci.js:', () => {
         expect(resultado).toEqual([1, 1, 2, 3, 5, 8]);
     });
 
-    xit('quando o número for 10 retornar 1, 1, 2, 3, 5, 8', () => {
+    it('quando o número for 10 retornar 1, 1, 2, 3, 5, 8', () => {
         var resultado = fibonacciUntil(10);
         expect(resultado).toEqual([1, 1, 2, 3, 5, 8]);
     });

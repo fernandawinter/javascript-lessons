@@ -1,0 +1,25 @@
+<html>
+    <head>
+      <meta charset="UTF-8"></meta>
+      <title>Fibonacci</title>
+    </head>
+    <body>
+        <p>Meu Fibonacci Profissional</p>
+        <input id="inputLimite" type="number"/>
+        <input type="button" value="Calcular Fibonacci" onclick="chamaCalculoFibonacci()"/>
+        <p id="resultadoCalculo"></p>
+    </body>
+</html>
+
+<script src="fibonacci.js"></script>
+
+
+<script>
+
+    function chamaCalculoFibonacci() {
+        var limiteDigitadoPeloUsuario = document.getElementById("inputLimite").value;
+        var meuFibonacci = fibonacciUntil(limiteDigitadoPeloUsuario);
+        document.getElementById("resultadoCalculo").innerHTML = meuFibonacci;
+    }
+
+</script>
