@@ -1,0 +1,48 @@
+<html>
+    <head>
+      <meta charset="UTF-8"></meta>
+      <title>Calculadora</title>
+    </head>
+    <body>
+        <p>Minha Calculadora</p>
+        <input id="primeiroValor" type="number"/>
+        <input id="segundoValor" type="number"/>
+        <input id="terceiroValor" type="number"/>
+        <input type="button" value="Dividir" onclick="clicaDividir()"/>
+        <input type="button" value="Multiplicar" onclick="clicaMultiplicar()"/>
+        <p id="resultadoCalculo"></p>
+
+    </body>
+</html>
+
+<script>
+function clicaDividir() {
+    var x = parseInt(document.getElementById("primeiroValor").value);
+    var y = parseInt(document.getElementById("segundoValor").value);
+    var z = var y = parseInt(document.getElementById("terceiroValor").value);
+    var resultado = divisao(x, y, z);
+    document.getElementById("resultadoCalculo").innerHTML = "Meu Resultado: " + resultado;
+
+}
+
+function clicaMultiplicar() {
+    var x = parseInt(document.getElementById("primeiroValor").value);
+    var y = parseInt(document.getElementById("segundoValor").value);
+    var z = parseInt(document.getElementById("terceiroValor").value);
+    var resultado = multiplicacao(x, y, z);
+    document.getElementById("resultadoCalculo").innerHTML = "Meu Resultado: " + resultado;
+
+}
+
+function divisao(valorA, valorB, valorC) {
+    var resultado = valorA / valorB / valorC;
+    return resultado;
+
+}
+
+function multiplicacao(valorA, valorB, valorC) {
+    var resultado = valorA * valorB * valorC;
+    return resultado;
+
+}
+</script>
