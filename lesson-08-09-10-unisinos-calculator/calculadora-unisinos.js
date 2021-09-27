@@ -30,14 +30,14 @@ function passouOuNao(grauA, grauB) {
 
 
     // return grauA * PESO_GRAU_A + grauB * PESO_GRAU_B >= 6;
-    
+
     // if (grauA * PESO_GRAU_A + grauB * PESO_GRAU_B >= 6) {
     //     return true;
     // } else {
     //     return false;
     // }
 }
- 
+
 function quantoPrecisoGrauB(grauA) {
 
     if (grauA > 10) {
@@ -50,6 +50,6 @@ function quantoPrecisoGrauB(grauA) {
 
     var totalGrauA = grauA * PESO_GRAU_A;
     var totalGrauB = 6 - totalGrauA;
-    var grauB =  Math.round((totalGrauB / PESO_GRAU_B) * 100) / 100;
+    var grauB = Math.round((totalGrauB / PESO_GRAU_B) * 100) / 100;
     return grauB;
 }
