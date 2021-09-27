@@ -8,13 +8,14 @@ function fibonacciUntil(numeroLimite) {
     //     novoElemento = listaDeElementosFibonacci[i] + listaDeElementosFibonacci[i + 1];
     //     i++;
     // }
-    
+
+    /*remembering do while*/
     do {
         var novoElemento = listaDeElementosFibonacci[i] + listaDeElementosFibonacci[i + 1];
         if (novoElemento > numeroLimite) {
             break;
         }
-        listaDeElementosFibonacci.push(novoElemento); 
+        listaDeElementosFibonacci.push(novoElemento);
         i = i + 1;
     } while (true);
 
