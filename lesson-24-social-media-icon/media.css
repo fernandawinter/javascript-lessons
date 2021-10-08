@@ -1,22 +1,20 @@
 html {
   font-size: 2.5em;
 }
-
 body {
   background-color: #fff;
   padding: 25px;
   text-align: center;
 }
-
 /* Wrapper */
 .icon-button {
   background-color: white;
-  border-radius: 2.6em;
+  border-radius: 2.6rem;
   cursor: pointer;
   display: inline-block;
-  font-size: 1.3em;
-  height: 2.6em;
-  line-height: 2.6em;
+  font-size: 1.3rem;
+  height: 2.6rem;
+  line-height: 2.6rem;
   margin: 0 5px;
   position: relative;
   text-align: center;
@@ -24,9 +22,8 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  width: 2.6em;
+  width: 2.6rem;
 }
-
 /* Circle */
 .icon-button span {
   border-radius: 0;
@@ -42,14 +39,12 @@ body {
   transition: all 0.3s;
   width: 0;
 }
-
 .icon-button:hover span {
   width: 2.6rem;
   height: 2.6rem;
   border-radius: 2.6rem;
   margin: -1.3rem;
 }
-
 /* Icons */
 .icon-button i {
   background: none;
@@ -66,12 +61,11 @@ body {
   width: 2.6rem;
   z-index: 10;
 }
-
 .twitter span {
   background-color: #4099ff;
 }
 .facebook span {
-  background-color: #385998;
+  background-color: #3b5998;
 }
 .google-plus span {
   background-color: #db5a3c;
@@ -92,7 +86,7 @@ body {
   color: #4099ff;
 }
 .icon-button .icon-facebook {
-  color: #385998;
+  color: #3b5998;
 }
 .icon-button .fa-tumblr {
   color: #34526f;
@@ -123,7 +117,7 @@ body {
     border-radius: 1.6rem;
     font-size: 0.8rem;
     height: 1.6rem;
-    line-height: 1rem;
+    line-height: 1.6rem;
     width: 1.6rem;
   }
   .icon-button:hover span {
@@ -132,9 +126,16 @@ body {
     border-radius: 1.6rem;
     margin: -0.8rem;
   }
+  /* Icons */
   .icon-button i {
     height: 1.6rem;
     line-height: 1.6rem;
     width: 1.6rem;
+  }
+  body {
+    padding: 10px;
+  }
+  .pinterest {
+    display: none;
   }
 }
