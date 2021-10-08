@@ -82,17 +82,17 @@ body {
 .pinterest span {
   background-color: #cb2027;
 }
-.icon-button .icon-twitter {
+.icon-button .fa-twitter {
   color: #4099ff;
 }
-.icon-button .icon-facebook {
+.icon-button .fa-facebook {
   color: #3b5998;
 }
 .icon-button .fa-tumblr {
   color: #34526f;
 }
-.icon-button .icon-google-plus {
-  color: #db5a3c;
+.icon-button .fa-google-plus-official {
+  color: #bb0000;
 }
 .icon-button .fa-instagram {
   color: #517fa4;
@@ -103,9 +103,9 @@ body {
 .icon-button .fa-pinterest {
   color: #cb2027;
 }
-.icon-button:hover .icon-twitter,
-.icon-button:hover .icon-facebook,
-.icon-button:hover .icon-google-plus,
+.icon-button:hover .fa-twitter,
+.icon-button:hover .fa-facebook,
+.icon-button:hover .fa-google-plus-official,
 .icon-button:hover .fa-tumblr,
 .icon-button:hover .fa-instagram,
 .icon-button:hover .fa-youtube,
